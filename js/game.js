@@ -13,16 +13,16 @@ const questionNumber = document.getElementById("question-number");
 const error = document.getElementById("error");
 
 const CORRECT_BONUS = 10;
-const URL = `https://opentdb.com/api.php?amount=10&difficulty=${level}&type=lmultiple`;
+const URL = `https://opentdb.com/api.php?amount=10&difficulty=${level}&type=multiple`;
 let formattedData = null;
 let questionIndex = 0;
 let correctAnswer = null;
 let score = 0;
 let isAccepted = true;
 
-const errorHandler =()=>{
-  location.assign("/")
-}
+const errorHandler = () => {
+  location.assign("/");
+};
 
 const fetchData = async () => {
   try {
@@ -33,7 +33,7 @@ const fetchData = async () => {
   } catch (err) {
     loader.style.display = "none";
     error.style.display = "block";
-    error.addEventListener("click",errorHandler)
+    error.addEventListener("click", errorHandler);
   }
 };
 
